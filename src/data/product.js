@@ -7,16 +7,16 @@ import servingBowl from "../assets/product/serving-bowl.jpg"
 import wirelessHeadphones from "../assets/product/wireless-headphones.jpg"
 
 const products = [
-  {
-    id: 1,
-    name: "Everyday Carry Bag",
-    category: "Lifestyle",
-    price: 68,
-    image: everydayBag,
-    images: [everydayBag, everydayBagWoman],
-    description:
-      "A structured everyday bag designed for work, travel, and everything in between.",
-  },
+ {
+  id: 1,
+  name: "Everyday Carry Bag",
+  category: "Lifestyle",
+  price: 68,
+  image: everydayBag,
+  images: [everydayBag, everydayBagWoman],
+  description:
+    "A structured everyday bag designed for work, travel, and everything in between.",
+},
   {
     id: 2,
     name: "Minimal Desk Lamp",
