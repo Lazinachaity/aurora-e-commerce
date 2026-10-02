@@ -1,11 +1,14 @@
 import { Link, useParams } from "react-router-dom"
 import { useState } from "react"
 import products from "../../data/product.js"
+import { useCart } from "../../context/CartContext.jsx"
 
 function ProductDetails() {
   const { id } = useParams()
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
+  const { addToCart } = useCart()
+  const [isAdded, setIsAdded] = useState(false)
 
   const product = products.find(
     (item) => item.id === Number(id)
@@ -114,9 +117,17 @@ function ProductDetails() {
 
               <button
                 type="button"
+                onClick={() => {
+                  addToCart(product, quantity)
+                  setIsAdded(true)
+
+                  setTimeout(() => {
+                    setIsAdded(false)
+                  }, 1500)
+                }}
                 className="w-full bg-neutral-950 px-6 py-4 text-sm font-medium text-white transition hover:bg-neutral-800"
               >
-                Add to bag
+                {isAdded ? "Added to bag" : "Add to bag"}
               </button>
 
               <button

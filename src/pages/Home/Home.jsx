@@ -1,10 +1,9 @@
-import Navbar from "../../components/layout/Navbar"
 import heroImage from "../../assets/hero.jpg"
 
 function Home() {
   return (
     <div className="min-h-screen bg-white text-neutral-950">
-      <Navbar />
+      
 
       <main>
         <section className="mx-auto grid max-w-7xl lg:grid-cols-2">
